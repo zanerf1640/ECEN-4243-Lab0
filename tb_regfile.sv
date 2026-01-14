@@ -20,18 +20,18 @@ module stimulus ();
 
    // Setup the clock to toggle every 5 time units 
    initial 
-     begin	
-    clk = 1'b1;
-    forever #5 clk = ~clk;
-     end
+    begin	
+      clk = 1'b1;
+      forever #5 clk = ~clk;
+    end
 
-   initial
-     begin
-    // Gives output file name
-    handle = $fopen("regfile_test.out");
-    // Tells when to finish simulation
-    #200 $finish;		
-     end
+    initial
+      begin
+        // Gives output file name
+        handle = $fopen("regfile_test.out");
+        // Tells when to finish simulation
+      #200 $finish;		
+      end
 
    always 
      begin
@@ -46,24 +46,35 @@ module stimulus ();
     #10 reset = 1'b0;	
 
     // Write to register 5
-    #10 we3 = 1'b1; wa3 = 5'd5; wd3 = 32'hA5A5A5A5;
+    #10 we3 = 1'b1; 
+    #10 wa3 = 5'd5; 
+    #10 wd3 = 32'hA5A5A5A5;
     #10 we3 = 1'b0; 
 
     // Read from register 5
-    #10 ra1 = 5'd5; ra2 = 5'd0;
+    ra1 = 5'd5; ra2 = 5'd0;
 
     // Write to register 10
-    #10 we3 = 1'b1; wa3 = 5'd10; wd3 = 32'h5A5A5A5A;
-    #10 we3 = 1'b0; 
+    #10 we3 = 1'b1; 
+    #10 wa3 = 5'd10; 
+    #10 wd3 = 32'h5A5A5A5A;
+    #10 we3 = 1'b0;
 
-    // Read from register 10 and register 5
-    #10 ra1 = 5'd10; ra2 = 5'd5;
+    // Read from register 10
+    ra1 = 5'd0; ra2 = 5'd10;
+
+    // Write to register 15
+    #10 we3 = 1'b1; 
+    #10 wa3 = 5'd15; 
+    #10 wd3 = 32'hFFFFFFFF;
+    #10 we3 = 1'b0;
+
+    // Read both register 10 and 5
+    ra1 = 5'd5; ra2 = 5'd10;
 
     // Reset the register file
     #10 reset = 1'b1;
     #10 reset = 1'b0;
 
-    // Read from register 5 and register 10 after reset
-    #10 ra1 = 5'd5; ra2 = 5'd10;
      end
 endmodule // stimulus
