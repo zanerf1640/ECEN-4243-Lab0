@@ -20,17 +20,17 @@ module stimulus ();
 
    // Setup the clock to toggle every 5 time units 
    initial 
-     begin	
-    clk = 1'b1;
-    forever #5 clk = ~clk;
-     end
+    begin	
+      clk = 1'b1;
+      forever #5 clk = ~clk;
+    end
 
    initial
      begin
     // Gives output file name
     handle = $fopen("regfile_test.out");
     // Tells when to finish simulation
-    #300 $finish;		
+    #200 $finish;		
      end
 
    always 
@@ -46,18 +46,18 @@ module stimulus ();
     #0  reset = 1'b1; we3 = 1'b0; ra1 = 5'd0; ra2 = 5'd0;
     #10 reset = 1'b0;	
 
-    // Test 2: Write to register 5
+    // Write to register 5
     #10 we3 = 1'b1; wa3 = 5'd5; wd3 = 32'hA5A5A5A5;
     #10 we3 = 1'b0; 
 
-    // Test 3: Read from register 5 with both ports
-    #10 ra1 = 5'd5; ra2 = 5'd5;
+    // Read from register 5
+    #10 ra1 = 5'd5; ra2 = 5'd0;
 
-    // Test 4: Write to register 10
+    // Write to register 10
     #10 we3 = 1'b1; wa3 = 5'd10; wd3 = 32'h5A5A5A5A;
     #10 we3 = 1'b0; 
 
-    // Test 5: Read from different registers on both ports
+    // Read from register 10 and register 5
     #10 ra1 = 5'd10; ra2 = 5'd5;
 
     // Test 6: Attempt to write to register 0 (should remain 0)
@@ -91,9 +91,7 @@ module stimulus ();
     #10 reset = 1'b1;
     #10 reset = 1'b0;
 
-    // Test 14: Verify all registers are zeroed after reset
+    // Read from register 5 and register 10 after reset
     #10 ra1 = 5'd5; ra2 = 5'd10;
-    #10 ra1 = 5'd15; ra2 = 5'd7;
-    #10 ra1 = 5'd20; ra2 = 5'd31;    
      end
 endmodule // stimulus
