@@ -15,7 +15,7 @@ module regfile (input logic         clk,
       if (reset) begin
          // Reset all registers to 0
          for (int i = 0; i < 32; i++) begin
-            rf[i] <= 32'b0;
+            rf[i] <= 32'b0; 
          end
       end 
       else if (we3 && (wa3 != 0)) begin

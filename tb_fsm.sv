@@ -50,5 +50,3 @@ module stimulus ();
      end
 
 endmodule // stimulus
-
-

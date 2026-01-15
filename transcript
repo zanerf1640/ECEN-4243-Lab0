@@ -1,19 +1,19 @@
-# do regfile.do
+# do {.\regfile.do}
 # Error 133: Unable to remove directory "C:/Users/zanef/OneDrive/Desktop/School/ECEN Curriculum/ECEN 4243/Lab/Lab0/SV/work".
 # ** Error: (vlib-35) Failed to create directory "work".
 # File exists. (errno = EEXIST)
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:08:22 on Jan 15,2026
+# Start time: 15:47:12 on Jan 15,2026
 # vlog -reportprogress 300 regfile.sv tb_regfile.sv 
 # -- Compiling module regfile
 # -- Compiling module stimulus
 # 
 # Top level modules:
 # 	stimulus
-# End time: 13:08:22 on Jan 15,2026, Elapsed time: 0:00:00
+# End time: 15:47:12 on Jan 15,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 13:08:23 on Jan 15,2026
+# Start time: 15:47:17 on Jan 15,2026
 # Loading sv_std.std
 # Loading work.stimulus
 # Loading work.regfile
@@ -21,12 +21,12 @@
 # .main_pane.wave.interior.cs.body.pw.wf
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: zanef  Hostname: ZANE  ProcessID: 6020
-#           Attempting to use alternate WLF file "./wlftawe0rz".
+#           Attempting to use alternate WLF file "./wlft99ye7a".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftawe0rz
+#           Using alternate file: ./wlft99ye7a
 # ** Note: $finish    : tb_regfile.sv(33)
-#    Time: 200 ps  Iteration: 0  Instance: /stimulus
+#    Time: 300 ps  Iteration: 0  Instance: /stimulus
 # 1
 # Break in Module stimulus at tb_regfile.sv line 33
-# End time: 13:08:42 on Jan 15,2026, Elapsed time: 0:00:19
+# End time: 15:49:27 on Jan 15,2026, Elapsed time: 0:02:10
 # Errors: 0, Warnings: 2
