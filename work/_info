@@ -8,43 +8,43 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/zanef/OneDrive/Desktop/School/ECEN Curriculum/ECEN 4243/Lab/Lab0/SV
-vfsm
+vregfile
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1768409319
+Z2 !s110 1768504102
 !i10b 1
-!s100 1QzHjXKg=]znBzg=Ud4lF3
-I>:X7L_0;SV`mWlz8I2?Kk0
+!s100 aj`4SKBYXZ<B^ImWVPLcA0
+ILoAY:dJNW_ZiEimAVTN2b0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 fsm_sv_unit
+!s105 regfile_sv_unit
 S1
 R0
-w1768449811
-8fsm.sv
-Ffsm.sv
+w1768502557
+8regfile.sv
+Fregfile.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1768409319.000000
-Z6 !s107 tb_fsm.sv|fsm.sv|
-Z7 !s90 -reportprogress|300|fsm.sv|tb_fsm.sv|
+Z5 !s108 1768504102.000000
+Z6 !s107 tb_regfile.sv|regfile.sv|
+Z7 !s90 -reportprogress|300|regfile.sv|tb_regfile.sv|
 !i113 1
 Z8 tCvgOpt 0
 vstimulus
 R1
 R2
 !i10b 1
-!s100 YlW4<DcJ^?b7c8S3n3ola3
-IOcjjlUQoenj10hWg40z_l0
+!s100 7^WS7@o3:F23cjglbK0H83
+I_=JcfHc>o2>=`Sdnm8;870
 R3
-!s105 tb_fsm_sv_unit
+!s105 tb_regfile_sv_unit
 S1
 R0
-w1768409306
-8tb_fsm.sv
-Ftb_fsm.sv
-L0 1
+w1768503793
+8tb_regfile.sv
+Ftb_regfile.sv
+L0 6
 R4
 r1
 !s85 0
